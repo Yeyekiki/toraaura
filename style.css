@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Futura;
 }
 .section_one{
     height: 100vh;
@@ -16,7 +16,7 @@
     padding: 40px 120px;
 }
 .nav-logo img{
-    width: 620px 
+    width: 710px 
 }
 .nav-links{
     flex: 1;
@@ -125,6 +125,7 @@
     position: absolute;
     text-align: left;
     z-index: 2;
+    font-family: "Helvetica Neue";
 }
 .nav-links ul a{
     display: block;
