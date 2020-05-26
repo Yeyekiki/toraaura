@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(bathroom.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Futura;
+}
+
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: pink;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
