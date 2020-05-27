@@ -1,27 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Futura;
 }
-.section_one{
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0,8),rgba(0,0,0,0,6)),url(gg.jpeg);
-    background-position: center;
-    background-size: cover;
-    overflow-x: hidden;
-    position: relative;
-}
-
 .nav-bar{
     display: flex;
     padding: 40px 120px;
 }
-.nav-logo img{
-    width: 710px;
-}
+
 .nav-links{
     flex: 1;
 }
+
 .nav-links ul{
     margin-left: 50px;
     display: inline;
@@ -58,38 +47,7 @@
 .nav-links .btn{
     float: right;
 }
-.banner-title{
-    margin: 100px 130px;
-    color: black;
-}
-.banner-title h1{
-    font-size: 64px;
-    margin-bottom: 30px;
-}
-.vertical-bar{
-    height: 100%;
-    background:black;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
 
-.social-media{
-    height: 100%;
-    width: 80px;
-    background: bisque;
-    text-align: center;
-    padding-top: 27%;
-    bottom: 0;
-    position: absolute;
-    color: black;
-}
-.social-media .fa{
-    margin: 15px 23px;
-    display: block;
-    padding: 8px;
-    cursor: pointer;
-}
 .nav-bar{
     padding: absolute;
     right: 20px;
@@ -109,7 +67,7 @@
     cursor: pointer;
 }
 .nav-links{
-    height: 100vh;
+    height: 3380px;
     width: 200px;
     background: #000;
     top: 0;
@@ -132,9 +90,7 @@
 }
 
 @media (max-width: 700px){
-    .vertical-bar{
-        display: none;
-    }
+
     .banner-title{
         margin: 80px 40px;
     }
@@ -159,7 +115,6 @@
     }
     .nav-links{
         height: 100vh;
-        width: 200px;
         background: bisque;
         top: 0;
         right: -200px;
@@ -195,3 +150,66 @@ a:hover {
     background-color: transparent;
     text-decoration: underline;
   }
+
+
+.animated-text{
+    font: 100px;
+    font-size: 40px;
+    font-family: Futura;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+span{
+    display: inline-block;
+    font-weight: bolder;
+    animation: mover 5s linear infinite;
+    color: lightpink;
+}
+
+
+
+@keyframes mover{
+    0%{
+        text-shadow: 0 0 30px rgba(0,0,0,0);
+    }
+    50%{
+        text-shadow: 0 0 30px rgba(0,0,0,0.30);
+        transform: translateY(30px);
+    }
+    100%{
+        text-shadow: 0 0 30px rgba(0,0,0,0);
+    }
+
+}
+span:nth-child(1)
+{
+    animation-delay: 0.5s;
+}
+span:nth-child(2)
+{
+    animation-delay: 1s;
+}
+span:nth-child(3)
+{
+    animation-delay: 1.5s;
+}
+
+.art-boxes img {
+    width:560px;
+    opacity: 1.0;
+    transition: opacity 2s;
+}
+
+.art-boxes img:hover{
+    opacity: 0.5;
+    transition-duration: 2s;
+}
+
+
+
+
+
+
