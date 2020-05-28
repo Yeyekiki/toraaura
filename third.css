@@ -67,7 +67,7 @@
     cursor: pointer;
 }
 .nav-links{
-    height: 3380px;
+    height: 3500px;
     width: 200px;
     background: #000;
     top: 0;
@@ -201,12 +201,27 @@ span:nth-child(3)
     width:560px;
     opacity: 1.0;
     transition: opacity 2s;
+    display: inline-block;
 }
 
 .art-boxes img:hover{
     opacity: 0.5;
     transition-duration: 2s;
 }
+
+.art-boxes span{
+    position: absolute;
+    top: 5px;
+    color: transparent;
+    left: 10px;
+}
+
+.art-boxes img:hover span {
+    color: black;
+  }
+
+  
+  
 
 
 
