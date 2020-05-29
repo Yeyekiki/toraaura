@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Donation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='donation.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="test"> </div>
+
+<body>
+    <div class="trucmuche">
+        <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+        <script>
+            paypal.Buttons().render('body');
+        </script>
+    </div>
+</body>

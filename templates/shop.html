@@ -1,0 +1,59 @@
+<html>
+ <head>
+     <title>The Art Shop</title>
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <link rel="stylesheet" href="{{ url_for('static', filename='third.css') }}">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+        <div class="section_one">
+                <div class="nav-bar">
+                        <div class="nav-links" id="nav-links">
+                                <i class="fa fa-close" onclick="closeMenu()"></i>
+                                <ul>
+                                        <a href="/"><li>HOME</li></a>
+                                        <a href="/shop"><li>SHOP</li></a>
+                                        <a href="#"><li>CONTACT</li></a>
+                                    </ul>
+                                    <button type="button" class="btn" onclick="window.location.href = '/login' ;">LOG IN</button>
+                            </div>
+                            <i class="fa fa-bars" onclick="showMenu()"></i>
+                            </div> 
+
+        <div class="animated-text">
+                <span>THE</span>
+                <span>ART</span>
+                <span>SHOP</span>
+                </div>
+           
+            <div class="art-boxes">
+                    <img src="{{ url_for('static', filename='leon.jpeg') }}" style="height: 800px;width: 620px;margin: 20px"><br> 
+                    <button type="button" class="bouton" onclick="window.location.href = '/leon' ;">DETAILS</button><br>
+                    <img src="{{ url_for('static', filename='hippie.jpeg') }}" style="height: 800px;width: 560px;padding: 20px"><br>
+                    <button type="button" class="bouton" onclick="window.location.href = 'index.html' ;">DETAILS</button><br>
+                    <img src="{{ url_for('static', filename='bath.jpeg') }}"style="height: 800px;width: 800px;padding: 20px"><br>
+                    <button type="button" class="bouton" onclick="window.location.href = 'index.html' ;">DETAILS</button><br>
+                    <img src="{{ url_for('static', filename='hall.jpeg') }}"style="height: 800px;width: 560px;padding: 20px"><br> 
+                    <button type="button" class="bouton" onclick="window.location.href = 'index.html' ;">DETAILS</button><br>
+                  </div>
+              </div>
+
+           
+           
+        
+
+            <script>
+                    var show = document.getElementById("nav-links");
+                    function showMenu(){
+                            show.style.right = "0";      
+                    }
+                    function closeMenu(){
+                            show.style.right = "-200px";      
+                    }
+            
+            </script>
+</body>
+</html>            
+
+            
