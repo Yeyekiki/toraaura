@@ -1,9 +1,17 @@
 *{
-    margin: 0;
+    margin: 50%;
     padding: 0;
 }
 
 .trucmuche{
     text-align: center;
     display: inline-block;
+    margin: 50%;
+}
+
+.test{
+    margin: 50%;
+    height: 100px;
+    width: 100px;
+    border: 1px solid;
 }

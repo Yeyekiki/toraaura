@@ -209,17 +209,22 @@ span:nth-child(3)
     transition-duration: 2s;
 }
 
-.art-boxes span{
+.middle {
+    transition: .5s ease;
+    opacity: 0.2;
     position: absolute;
-    top: 5px;
-    color: transparent;
-    left: 10px;
-}
-
-.art-boxes img:hover span {
-    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
   }
 
+  .text {
+    color: pink;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
   
   
 
