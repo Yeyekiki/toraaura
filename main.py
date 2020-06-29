@@ -12,23 +12,21 @@ def home():
 
 @app.route('/shop')
 def shop():
-    return render_template('shop.html', logged_in=session.get('logged_in'))
+    Session = sessionmaker(bind=engine)
+    s = Session()
+    query = s.query(Artwork)
+    artworks = query.all()
+    return render_template('shop.html', logged_in=session.get('logged_in'), artworks=artworks)
 
-@app.route('/leon')
-def leon():
-    return render_template('details.html', logged_in=session.get('logged_in'), title="LEON, painting", image="leon.jpeg", description="This is a painting of the infamous poster of Luc Besson's masterpiece 'Leon: The Professional'. We can see Leon (Jean Reno) with sunglasses staring at NY's skyline. If you are interested in learning more about or purchasing this piece, please contact me for further information.")
+@app.route('/details/<name>')
+def details(name):
+    Session = sessionmaker(bind=engine)
+    s = Session()
+    query = s.query(Artwork).filter(Artwork.path.in_([name]))
+    result = query.first()
+    print(result)
+    return render_template('details.html', logged_in=session.get('logged_in'), title=result.title, image=result.image, description=result.description)
 
-@app.route('/kanja')
-def kanja():
-    return render_template('details.html', logged_in=session.get('logged_in'), title="Kanja, picture", image="hippie.jpeg", description="This is a picture of Kanja, the second greatest artist in the world (currently).")
-
-@app.route('/bath')
-def bath():
-    return render_template('details.html', logged_in=session.get('logged_in'), title="The Bath, painting", image="bath.jpeg", description="This is a painting inspired by a picture taken by the talented Sarah Babah.")
-
-@app.route('/hall')
-def hall():
-    return render_template('details.html', logged_in=session.get('logged_in'), title="Unusual Warmth, picture", image="hall.jpeg", description="This is a film picture taken in a cold and isolated hallway that was illuminated by sunlight.")
 
 @app.route('/donate')
 def donate():

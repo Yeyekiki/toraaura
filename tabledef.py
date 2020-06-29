@@ -20,5 +20,21 @@ class User(Base):
         self.username = username
         self.password = password
 
+class Artwork(Base):
+
+    __tablename__ = "artworks"
+
+    id = Column(Integer, primary_key=True)
+    path = Column(String)
+    title = Column(String)
+    description = Column(String)
+    image = Column(String)
+
+    def __init__(self, path, title, description, image):
+        self.path = path
+        self.title = title
+        self.description = description
+        self.image = image
+
 # create tables
 Base.metadata.create_all(engine)
