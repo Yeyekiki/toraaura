@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    print(session['logged_in'])
     return render_template('index.html', logged_in=session.get('logged_in'))
 
 @app.route('/shop')
