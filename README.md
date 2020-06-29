@@ -28,14 +28,23 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Set flask app environment variable and run flask app
+4. Initialise Database
 ```bash
+python init-db.py
+# Hi! Please choose a username: username
+# Choose a password: 
+# Please repeat your password: 
+```
+
+5. Set FLASK_SECRET_KEY environment variable and run flask app
+```bash
+export FLASK_SECRET_KEY=yoursupersecretkey
 python run.py
 
-#Serving Flask app "main" (lazy loading)
-# * Environment: production
-#   WARNING: This is a development server. Do not use it in a production deployment.
-#   Use a production WSGI server instead.
-# * Debug mode: on
-# * Running on http://0.0.0.0:4000/ (Press CTRL+C to quit)
+# Serving Flask app "main" (lazy loading)
+#  * Environment: production
+#    WARNING: This is a development server. Do not use it in a production deployment.
+#    Use a production WSGI server instead.
+#  * Debug mode: on
+#  * Running on http://0.0.0.0:4000/ (Press CTRL+C to quit)
 ```

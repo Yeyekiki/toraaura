@@ -5,6 +5,12 @@
     width: 50%;
 }
 
+.art-boxes img {
+    width: 800px;
+    height: auto;
+    margin: 20px;
+}
+
 h1{
     font-family: Futura;
     font-size: 27px;
