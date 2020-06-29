@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block css %}
+     <link rel="stylesheet" href="{{ url_for('static', filename='details.css') }}">
+{% endblock %}
+{% block content %}
+
+        <div class="art-boxes">
+                <img src="{{ url_for('static', filename=image) }}" style="height: 800px;width: 620px;margin: 20px"><br> 
+        </div>
+        <title>{{ title }}</title>
+        <br><h1>{{ description }}</h1><br> 
+{% endblock %}

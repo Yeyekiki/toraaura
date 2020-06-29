@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Art Shop</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+        {% block css %}{% endblock %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>                        
+
+        <div class="section_one">
+                <div class="nav-bar">
+
+                        <div class="nav-links" id="nav-links">
+                                <i class="fa fa-close" onclick="closeMenu()"></i>
+                                <ul>
+                                        <a href="/">
+                                                <li>HOME</li>
+                                        </a>
+                                        <a href="/shop">
+                                                <li>SHOP</li>
+                                        </a>
+                                        <a href="#">
+                                                <li>CONTACT</li>
+                                        </a>
+                                </ul>
+                                {% if logged_in %}
+                                <a href='/logout'><button type="button" class="btn">LOG
+                                        OUT</button></a>
+{% else %}
+<a href='/login'><button type="button" class="btn">LOG
+        IN</button></a>
+{% endif %}
+
+                        </div>
+                        <i class="fa fa-bars" onclick="showMenu()"></i>
+                </div>
+    <div id="content">{% block content %}{% endblock %}</div>
+
+</body>
+</html>

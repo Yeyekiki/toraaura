@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Futura;
+}
+
+.section_one{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0,8),rgba(0,0,0,0,6)),url(gg.jpeg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.nav-bar{
+    display: flex;
+    padding: 40px 120px;
+}
+.nav-logo img{
+    width: 710px;
+}
+.nav-links{
+    flex: 1;
+}
+.nav-links ul{
+    margin-left: 50px;
+    display: inline;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+}
+.nav-links ul a{
+    color: dimgray;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #ffe4e1;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.btn{
+    padding: 10px 20px;
+    border: 0;
+    background: #a52a2a;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-links .btn{
+    float: right;
+}
+
+.nav-bar{
+    padding: absolute;
+    right: 20px;
+    top: 10px;
+}
+.fa-bars{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: bisque;
+}
+.nav-bar .fa{
+    display: block;
+    color: peru;
+    margin: 10px 25px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.nav-links{
+    height: 100vh;
+    width: 200px;
+    background: #000;
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-align: left;
+    z-index: 2;
+    font-family: "Helvetica Neue";
+}
+.nav-links ul a{
+    display: block;
+}
+.nav-links .btn{
+    float: none;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.nav-bar .fa{
+    display: block;
+}
+
+@media (max-width: 700px){
+    .vertical-bar{
+        display: none;
+    }
+    .banner-title{
+        margin: 80px 40px;
+    }
+    .banner-title h1{
+        font-size: 50px;
+    }
+    .nar-bar{
+        padding: 10px 30px;
+    }
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .nav-bar .fa{
+        display: block;
+        color: grey;
+        margin: 10px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+    }
+    .nav-links{
+        height: 100vh;
+        width: 200px;
+        background: bisque;
+        top: 0;
+        right: -200px;
+        position: absolute;
+        text-align: left;
+        z-index: 2;
+    }
+    .nav-links ul a{
+        display: block;
+    }
+    .nav-links .btn{
+        float: none;
+        margin-left: 25px;
+        margin-top: 10px;
+    } 
+
+}
+
+a:link {
+    color: black; 
+    background-color: transparent; 
+    text-decoration: none;
+  }
+
+a:visited {
+    color: rgb(201, 65, 24);
+    background-color: transparent;
+    text-decoration: none;
+}

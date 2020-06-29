@@ -9,6 +9,8 @@ engine = create_engine('sqlite:///tutorial.db', echo=True)
 Session = sessionmaker(bind=engine)
 session = Session()
 
+username = input("Hi! Please choose a username ")
+password = input("What would you like your password to be? ")
 user = User("admin","password")
 session.add(user)
 

@@ -1,4 +1,3 @@
-from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
 import os
 from sqlalchemy.orm import sessionmaker
@@ -8,15 +7,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', logged_in=session["logged_in"])
 
 @app.route('/shop')
 def shop():
-    return render_template('shop.html')
+    return render_template('shop.html', logged_in=session["logged_in"])
 
 @app.route('/leon')
 def leon():
-    return render_template('leondetails.html')
+    return render_template('details.html', logged_in=session["logged_in"], title="LEON, painting", image="leon.jpeg", description="This is a painting of the infamous poster of Luc Besson's masterpiece 'Leon: The Professional'. We can see Leon (Jean Reno) with sunglasses staring at NY's skyline. If you are interested in learning more about or purchasing this piece, please contact me for further information.")
+
+@app.route('/kanja')
+def kanja():
+    return render_template('details.html', logged_in=session["logged_in"], title="Kanja, picture", image="hippie.jpeg", description="This is a picture of Kanja, the second greatest artist in the world (currently).")
 
 @app.route('/donate')
 def donate():
@@ -54,7 +57,5 @@ def logout():
     return home()
 
 
-if __name__ == "__main__":
-    app.secret_key = os.urandom(12)
-    app.run(debug=True,host='0.0.0.0', port=4000)
+
 

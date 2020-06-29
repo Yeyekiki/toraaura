@@ -1,38 +1,11 @@
-<html>
-
-<head>
-        <title>The Art Shop</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-
-        <!--landing page-->
-        <div class="section_one">
-                <div class="nav-bar">
-                        <div class="nav-logo">
-                                <img src="{{ url_for('static', filename='gg.jpeg') }}">
-                        </div>
-                        <div class="nav-links" id="nav-links">
-                                <i class="fa fa-close" onclick="closeMenu()"></i>
-                                <ul>
-                                        <a href="/">
-                                                <li>HOME</li>
-                                        </a>
-                                        <a href="/shop">
-                                                <li>SHOP</li>
-                                        </a>
-                                        <a href="#">
-                                                <li>CONTACT</li>
-                                        </a>
-                                </ul>
-                                <a href='/login'><button type="button" class="btn">LOG
-                                        IN</button></a>
-                        </div>
-                        <i class="fa fa-bars" onclick="showMenu()"></i>
-                </div>
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+{% block content %}
+<div class="nav-logo">
+                <img src="{{ url_for('static', filename='gg.jpeg') }}">
+        </div>
                 <div class="banner-title">
                         <h1>Support a small artist</h1>
                         <button type="button" class="btn"
@@ -56,6 +29,4 @@
                 }
         </script>
 
-</body>
-
-</html>
+{% endblock %}
