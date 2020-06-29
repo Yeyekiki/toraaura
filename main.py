@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from tabledef import *
 
 app = Flask(__name__)
-
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 @app.route('/')
 def home():
